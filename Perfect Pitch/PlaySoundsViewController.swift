@@ -11,15 +11,12 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
     
-    // audioPlayer: playback of audio data from a file or memory
     var audioPlayer:AVAudioPlayer!
-    // Recorded Audio received from RecordSoundsViewController, format: NSURL
     var receivedAudio:RecordedAudio!
     
     // audioEngine processes the recorded audio file (pitch change & ...)
     var audioEngine:AVAudioEngine!
     
-    // audioPlayerNode.scheduleFile requires AVAudioFile format: NSURL will be converted into AVAudioFile
     var audioFile:AVAudioFile!
 
     override func viewDidLoad() {
