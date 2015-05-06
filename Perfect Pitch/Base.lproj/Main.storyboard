@@ -163,7 +163,7 @@
                         <constraints>
                             <constraint firstItem="REC-se-koE" firstAttribute="top" secondItem="ocm-Na-Pmc" secondAttribute="bottom" constant="50" id="0KO-fU-lbl"/>
                             <constraint firstAttribute="centerX" secondItem="2ke-aY-jg6" secondAttribute="centerX" id="0Qg-vV-TGg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LoO-xQ-kAe" secondAttribute="trailing" constant="45" id="69U-da-heN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LoO-xQ-kAe" secondAttribute="trailing" constant="30" id="69U-da-heN"/>
                             <constraint firstItem="Vy8-bK-WAO" firstAttribute="top" secondItem="LoO-xQ-kAe" secondAttribute="bottom" constant="89" id="MqP-nC-hgQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Vy8-bK-WAO" secondAttribute="trailing" constant="30" id="OG0-RC-ZgA"/>
                             <constraint firstItem="LoO-xQ-kAe" firstAttribute="top" secondItem="ocm-Na-Pmc" secondAttribute="bottom" constant="50" id="iSV-Hm-LKI"/>
