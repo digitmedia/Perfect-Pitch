@@ -67,14 +67,14 @@
                                 <exclude reference="coy-5N-gAU"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="IrM-sy-OiJ"/>
-                                <exclude reference="UBa-iz-4yI"/>
+                                <exclude reference="z9m-WX-OYN"/>
                                 <exclude reference="Qvl-HT-6yX"/>
                                 <exclude reference="paD-xm-xZc"/>
                                 <exclude reference="05c-t0-ml8"/>
                                 <exclude reference="Ksj-wP-wb8"/>
                                 <exclude reference="ux3-hW-3Ky"/>
-                                <exclude reference="z9m-WX-OYN"/>
+                                <exclude reference="IrM-sy-OiJ"/>
+                                <exclude reference="UBa-iz-4yI"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -84,12 +84,12 @@
                                 <include reference="Y8G-eg-wdN"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="IrM-sy-OiJ"/>
-                                <include reference="UBa-iz-4yI"/>
+                                <include reference="z9m-WX-OYN"/>
                                 <include reference="05c-t0-ml8"/>
                                 <include reference="Ksj-wP-wb8"/>
                                 <include reference="ux3-hW-3Ky"/>
-                                <include reference="z9m-WX-OYN"/>
+                                <include reference="IrM-sy-OiJ"/>
+                                <include reference="UBa-iz-4yI"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -168,9 +168,6 @@
                                 <state key="normal" image="Darthvader">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="239" y="303" width="100" height="100"/>
-                                </variation>
                                 <connections>
                                     <action selector="playDarthvaderAudio:" destination="ohg-t8-FmZ" eventType="touchUpInside" id="jgg-XC-8UZ"/>
                                 </connections>
@@ -198,16 +195,16 @@
                                 <exclude reference="Vy8-bK-WAO"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="0KO-fU-lbl"/>
-                                <exclude reference="l2L-hW-k5g"/>
+                                <exclude reference="sEI-F0-HqH"/>
+                                <exclude reference="0Qg-vV-TGg"/>
                                 <exclude reference="69U-da-heN"/>
                                 <exclude reference="iSV-Hm-LKI"/>
                                 <exclude reference="icr-Lp-lfX"/>
                                 <exclude reference="pzC-gm-h9X"/>
+                                <exclude reference="0KO-fU-lbl"/>
+                                <exclude reference="l2L-hW-k5g"/>
                                 <exclude reference="MqP-nC-hgQ"/>
                                 <exclude reference="OG0-RC-ZgA"/>
-                                <exclude reference="0Qg-vV-TGg"/>
-                                <exclude reference="sEI-F0-HqH"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -219,16 +216,16 @@
                                 <include reference="Vy8-bK-WAO"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="0KO-fU-lbl"/>
-                                <include reference="l2L-hW-k5g"/>
+                                <include reference="sEI-F0-HqH"/>
+                                <include reference="0Qg-vV-TGg"/>
                                 <include reference="69U-da-heN"/>
                                 <include reference="iSV-Hm-LKI"/>
                                 <include reference="icr-Lp-lfX"/>
                                 <include reference="pzC-gm-h9X"/>
+                                <include reference="0KO-fU-lbl"/>
+                                <include reference="l2L-hW-k5g"/>
                                 <include reference="MqP-nC-hgQ"/>
                                 <include reference="OG0-RC-ZgA"/>
-                                <include reference="0Qg-vV-TGg"/>
-                                <include reference="sEI-F0-HqH"/>
                             </mask>
                         </variation>
                     </view>
