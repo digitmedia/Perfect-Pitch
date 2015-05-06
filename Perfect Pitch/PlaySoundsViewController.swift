@@ -18,8 +18,7 @@ class PlaySoundsViewController: UIViewController {
     
     // audioEngine processes the recorded audio file (pitch change & ...)
     var audioEngine:AVAudioEngine!
-    // audioPlayerNode plays buffers or segemnts of audio files
-    var audioPlayerNode:AVAudioPlayerNode!
+    
     // audioPlayerNode.scheduleFile requires AVAudioFile format: NSURL will be converted into AVAudioFile
     var audioFile:AVAudioFile!
 
@@ -42,39 +41,45 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playSlowAudio(sender: UIButton) {
-        audioEngine.stop()
-        audioEngine.reset()
-        audioPlayer.stop()
-        audioPlayer.rate = 0.5
-        audioPlayer.currentTime = 0.0
-        audioPlayer.play()
+        playAudioWithVariableRate(0.5)
         println("Play Slow")
     }
 
     @IBAction func playFastAudio(sender: UIButton) {
-        audioEngine.stop()
-        audioEngine.reset()
-        audioPlayer.stop()
-        audioPlayer.rate = 1.5
-        audioPlayer.currentTime = 0.0
-        audioPlayer.play()
+        playAudioWithVariableRate(1.5)
         println("Play Fast")
     }
     
+    func stopAudioPlayerAndEngine() {
+        audioEngine.stop()
+        audioEngine.reset()
+        audioPlayer.stop()
+    }
+    
+    
+    func playAudioWithVariableRate(rate: Float) {
+        stopAudioPlayerAndEngine()
+        
+        audioPlayer.rate = rate
+        audioPlayer.currentTime = 0.0
+        audioPlayer.play()
+    }
+    
     @IBAction func playChipmunkAudio(sender: UIButton) {
-       playAudioWithVariablePitch(750)
+        playAudioWithVariablePitch(750)
+        println("Play High Pitch")
     }
     
     @IBAction func playDarthvaderAudio(sender: UIButton) {
         playAudioWithVariablePitch(-750)
+        println("Play Low Pitch")
     }
 
     func playAudioWithVariablePitch(pitch: Float) {
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        stopAudioPlayerAndEngine()
         
-        audioPlayerNode = AVAudioPlayerNode()
+        // audioPlayerNode plays buffers or segemnts of audio files
+        var audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
         
         var changePitchEffect = AVAudioUnitTimePitch()
@@ -92,22 +97,7 @@ class PlaySoundsViewController: UIViewController {
     
     
     @IBAction func stopAudio(sender: UIButton) {
-        audioPlayer.stop()
-        if audioPlayerNode != nil {
-            audioPlayerNode.stop()
-        }
-
+        stopAudioPlayerAndEngine()
         println("Stop")
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
