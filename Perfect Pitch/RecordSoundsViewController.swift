@@ -32,6 +32,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         //Hide the stop button
         stopButton.hidden = true
         recordButton.enabled = true
+        recordingState.text = "Tap to record"
+        recordingState.textColor = UIColor.blackColor()
     }
 
     @IBAction func RecordAudio(sender: UIButton) {
@@ -87,8 +89,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func stopAudio(sender: UIButton) {
-        recordingState.text = "Tap to record"
-        recordingState.textColor = UIColor.blackColor()
         audioRecorder.stop()
         var audioSession = AVAudioSession.sharedInstance()
         audioSession.setActive(false, error: nil)
